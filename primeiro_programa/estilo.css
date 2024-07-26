@@ -1,0 +1,87 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+body {
+    background: url("./img/background.png");
+    background-size: cover;
+}
+.estilo {
+   
+    width:450px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    padding: 20px;
+   margin: 100px auto 0;
+}
+
+.tarefa {
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    font-size: medium;
+}
+
+.add_tarefa {
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    padding: 0 15px;
+    float: right;
+    cursor: crosshair;
+    font-weight: 700;
+}
+
+.add_tarefa:hover {
+    opacity: 0.8;
+}
+.add_tarefa:active {
+    opacity: 0.6;
+}
+
+.lista {
+    list-style: none;
+    width: 100%;
+    
+}
+
+.task {
+    background-color: #f2f2f2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+img {
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.task:hover img {
+    opacity: 1;
+}
+
+.done {
+    background-color: #8fac55;
+    text-decoration: line-through;
+}
+
+
+
