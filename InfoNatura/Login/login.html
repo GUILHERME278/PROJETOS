@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Natura</title>
+    <link rel="styleheet" type="text/css" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Formulario de Cadastro dos Usuarios / definicao da caixa-->
+    <div class="is-flex is-justify-content-center is-align-items-center" style="height: 100vh;">
+        <div class="box p-6">
+            <form method="post" action="login.php">
+                <!--Texto inical-->
+                <h1 class="title is-size-5 mb-2">Logue-se no nosso site!</h1>
+                <h2 class="subtitle is-size-7">Seja bem-vindo ao Info Natura, prossiga com o Login.</h2>
+                
+                <!--Informacoes de Cadastro-->
+                <p class="label is-size-6">Email:</p>
+                    <input class="input mb-3" type="email" name="email">
+                <p class="label is-size-6">Senha:</p>
+                    <input class="input mb-5" type="password" name="senha">
+
+                    <!--botoes de Login-->
+                <div class="is-flex is-justify-content-right">
+                    <button type="submit" class="button is-primary mb-0 mr-2" name="enviar">Logar</button>
+                    <a href="cadastro.html" class="button is-normal" name="enviar">Cadastrar-Se</a>
+                </div>
+            </form>
+        </div>
+      </div>
+
+
+</body>
+</html>
