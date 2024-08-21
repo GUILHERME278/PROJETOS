@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="styleheet" type="text/css" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!--Definindo Formulario de Cadastro / Caixa-->
+    <div class="formulario is is-flex is-justify-content-center is-align-items-center" style="height: 100vh;">
+        <div class="box p-6">
+            <form method="post" action="../php/cadastro.php">
+                <!--Textos da tela-->
+                <h1 class="title is-size-5 mb-2">Cadastrar-Se</h1>
+                <h2 class="subtitle is-size-7">Complete todos os requerimentos para prosseguir com o cadastro!</h2>
+
+                <!--Informacoes do Cadastro-->
+                <p class="label">Digite o seu Nome Completo:</p>
+                <input class="input mb-2" placeholder="Exemplo da Silva" name="nome" type="text" maxlength="30" minlength="15">
+
+                <p class="label">Digite o seu Email</p>
+                <input class="input mb-2" placeholder="exemplo123@gmail.com" name="email" type="email" maxlength="40">
+
+                <p class="label">Digite a sua Senha:</p>
+                <input class="input mb-2" placeholder="exemplo1234" name="senha" type="password" minlength="8">
+
+                <p class="label">Digite seu Telefone:</p>
+                <input class="input mb-2" placeholder="(00) 00000-0000" type="numeroseletor number" name="telefone" id="telefone">
+
+                <label class="label">Selecione seu Estado:</label>
+                <div class="control mb-2">
+                    <div class="select">
+                        <select name="estado">
+                            <option value="">Selecione um estado</option>
+                            <option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapá</option><option value="AM">Amazonas</option><option value="BA">Bahia</option><option value="CE">Ceará</option><option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option><option value="GO">Goiás</option> <option value="MA">Maranhão</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option><option value="PA">Pará</option><option value="PB">Paraíba</option><option value="PR">Paraná</option><option value="PE">Pernambuco</option><option value="PI">Piauí</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option><option value="RO">Rondônia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">São Paulo</option><option value="SE">Sergipe</option><option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </div>
+
+                <p class="label is-size-7">Insira sua Data de Nascimento:</p>
+                <input class="input mb-2" type="date" name="data">
+
+                <!--Defininfo os Bostoes de Cadastro-->
+                <div class="is-flex is-justify-content-right">
+                    <button type="submit" class="button is-primary mb-0 mr-2" name="enviar">Cadastar</button>
+                    <a href="login.html" class="button is-normal" name="enviar">Logar-se</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--Importanto  o Jquery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script> <!--Importa biblioteca de mascaras-->
+<script src="../js/script.js"></script> <!--Importanto JavaScript externo para o formulario-->
+</html>
