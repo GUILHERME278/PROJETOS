@@ -1,0 +1,172 @@
+ /* Layout com 10 colunas e com espaçamento de 8 px entre elas*/
+
+ .number-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 4rem);
+    gap: 8px;
+    
+}
+/* estilo de cada número */
+.number-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+/*animação para aumentar tamano */
+.number-item:hover {
+    transform: scale(1.1);
+}
+/*quando número selecionado */
+.number-item.selected {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+}
+/*estilo quando número já comprado*/
+.number-item.comprado {
+    background-color: #ef4444;
+    color: white;
+    cursor: not-allowed;
+}
+
+.buyer-panel {
+    display: block;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Cria fundo escuro sobre toda a tela.
+
+Centraliza o conteúdo com flexbox*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+/*Área interna branca, arredondada, com rolagem se necessário.*/
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+ /* Estilos adicionais podem ser colocados aqui se necessário */
+        /* Ocultar scrollbar padrão e estilizar se necessário (opcional) */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .number-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .etec-gradient {
+            background: linear-gradient(135deg, #003e7e 0%, #0056b3 100%);
+        }
+        
+        .number-item.selected {
+            background-color: #003e7e !important;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .number-item.sold {
+            background-color: #9e1b32 !important;
+            color: white;
+            cursor: not-allowed;
+        }
+        
+        .number-item:hover:not(.sold):not(.selected) {
+            background-color: #0056b3 !important;
+            color: white;
+            transform: scale(1.1);
+            
+        }
+        
+        /* Ocultar scrollbar padrão e estilizar se necessário */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .modal-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #003e7e;
+            border-radius: 10px;
+        }
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+        }
+        
+        /* Logo da Etec no cabeçalho */
+        .etec-logo {
+            height: 50px;
+            width: auto;
+        }
+        
+        /* Animação de fade-in personalizada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .etec-gradient {
+            background: linear-gradient(135deg, #003e7e 0%, #0056b3 100%);
+        }
+
+        .red-trash-icon {
+           color: red;
+        }
+
+    
