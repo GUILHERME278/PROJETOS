@@ -1,33 +1,22 @@
- /* Layout com 10 colunas e com espaçamento de 8 px entre elas*/
+/* Layout com 10 colunas e com espaçamento de 8 px entre elas*/
 
- .number-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 4rem);
-    gap: 8px;
-    
-}
+/* Removido - substituído pela versão mais abaixo */
+
 /* estilo de cada número */
-.number-item {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    background-color: lightgray;
-    cursor: pointer;
-    transition: all 0.2s;
-}
+/* Removido - substituído pela versão mais abaixo */
+
 /*animação para aumentar tamano */
 .number-item:hover {
     transform: scale(1.1);
 }
+
 /*quando número selecionado */
 .number-item.selected {
     background-color: #3b82f6;
     color: white;
     font-weight: bold;
 }
+
 /*estilo quando número já comprado*/
 .number-item.comprado {
     background-color: #ef4444;
@@ -64,6 +53,7 @@ Centraliza o conteúdo com flexbox*/
     justify-content: center;
     align-items: center;
 }
+
 /*Área interna branca, arredondada, com rolagem se necessário.*/
 .modal-content {
     background-color: white;
@@ -75,98 +65,188 @@ Centraliza o conteúdo com flexbox*/
     overflow-y: auto;
 }
 
- /* Estilos adicionais podem ser colocados aqui se necessário */
-        /* Ocultar scrollbar padrão e estilizar se necessário (opcional) */
-        .modal-content::-webkit-scrollbar {
-            width: 8px;
-        }
+/* Estilos adicionais podem ser colocados aqui se necessário */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
 
-        .modal-content::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
 
-        .modal-content::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
+.modal-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
 
-        .modal-content::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
     .number-grid {
         grid-template-columns: repeat(5, 1fr);
     }
+    
+    /* Layout responsivo para mobile */
+    .flex.flex-row.gap-32.items-start.ml-16.mt-10n {
+        flex-direction: column;
+        gap: 1rem;
+        margin-left: 0;
+        margin-top: 0;
+        padding: 1rem;
+    }
+    
+    .w-full.h-72.mr-14 {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+    
+    .max-w-sm {
+        max-width: 100%;
+    }
+    
+    .arrow-button {
+        min-width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .number-grid {
+        grid-template-columns: repeat(5, 2.5rem);
+        gap: 4px;
+    }
+    
+    .number-item {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 0.8rem;
+    }
 }
 
 body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .etec-gradient {
-            background: linear-gradient(135deg, #003e7e 0%, #0056b3 100%);
-        }
-        
-        .number-item.selected {
-            background-color: #003e7e !important;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .number-item.sold {
-            background-color: #9e1b32 !important;
-            color: white;
-            cursor: not-allowed;
-        }
-        
-        .number-item:hover:not(.sold):not(.selected) {
-            background-color: #0056b3 !important;
-            color: white;
-            transform: scale(1.1);
-            
-        }
-        
-        /* Ocultar scrollbar padrão e estilizar se necessário */
-        .modal-content::-webkit-scrollbar {
-            width: 8px;
-        }
-        .modal-content::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        .modal-content::-webkit-scrollbar-thumb {
-            background: #003e7e;
-            border-radius: 10px;
-        }
-        .modal-content::-webkit-scrollbar-thumb:hover {
-            background: #0056b3;
-        }
-        
-        /* Logo da Etec no cabeçalho */
-        .etec-logo {
-            height: 50px;
-            width: auto;
-        }
-        
-        /* Animação de fade-in personalizada */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        .etec-gradient {
-            background: linear-gradient(135deg, #003e7e 0%, #0056b3 100%);
-        }
+.etec-gradient {
+    background: linear-gradient(135deg, #003e7e 0%, #0056b3 100%);
+}
 
-        .red-trash-icon {
-           color: red;
-        }
+.number-item.selected {
+    background-color: #003e7e !important;
+    color: white;
+    font-weight: bold;
+}
 
-    
+.number-item.sold {
+    background-color: #9e1b32 !important;
+    color: white;
+    cursor: not-allowed;
+}
+
+.number-item:hover:not(.sold):not(.selected) {
+    background-color: #0056b3 !important;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Ocultar scrollbar padrão e estilizar se necessário */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: #003e7e;
+    border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+/* Logo da Etec no cabeçalho */
+.etec-logo {
+    height: 50px;
+    width: auto;
+}
+
+/* Animação de fade-in personalizada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.etec-gradient {
+    background: linear-gradient(135deg, #003e7e 0%, #0056b3 100%);
+}
+
+.red-trash-icon {
+   color: red;
+}
+
+/* Classes para o novo layout */
+/* Removido - layout original */
+
+/* Removido - layout original */
+
+.arrow-button {
+    background-color: #003e7e;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+    font-size: 1.5rem;
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-button:hover {
+    background-color: #0056b3;
+}
+
+.arrow-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Ajuste da grade para ficar mais compacta */
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 3.5rem);
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* Ajuste dos itens de número */
+.number-item {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+

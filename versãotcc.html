@@ -28,7 +28,7 @@
     <div class="flex flex-row gap-32 items-start ml-16 mt-10n ">
         <!-- Container da esquerda -->
         <div class="bg-white rounded-lg shadow-md p-6 fade-in border-t-4 border-etec-blue max-w-sm flex-shrink-0">
-            <h2 id="raffle-title" class="text-3xl font-bold text-blue-700 mb-2"></h2>
+            <h2 id="raffle-title" class="text-3xl font-bold text-blue-700 mb-2">Rifa Beneficente</h2>
             <p id="raffle-description" class="text-gray-700 mb-4">Ajude nossa causa e concorra a prêmios incríveis!</p>
 
             <div class="grid grid-cols-1 gap-4 text-sm md:text-base">
@@ -65,12 +65,12 @@
         <!-- Seleção de Números -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6 fade-in border-t-4 border-etec-red">
             <h3 class="text-xl font-semibold mb-4 text-gray-800">Escolha seus números da sorte</h3>
-            <div class="justify-between">
-                <button>&lt</button>
-                <div class="number-grid mb-6 " id="numbers-grid">
+            <div class="flex items-center justify-center mb-6">
+                <button class="arrow-button" id="prev-numbers">&lt;</button>
+                <div class="number-grid mx-4" id="numbers-grid">
                     <!-- Números serão gerados dinamicamente pelo JavaScript -->
                 </div>
-                <button>&gt</button>
+                <button class="arrow-button" id="next-numbers">&gt;</button>
             </div>
             <div class="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
                 <p class="text-gray-700 font-medium">Selecionados: <span id="selected-count"
@@ -84,7 +84,7 @@
 
             <div class="bg-blue-50 border border-blue-200 p-4 rounded-md mb-6 text-center">
                 <h4 class="font-medium text-blue-800 mb-1">Valor total da seleção:</h4>
-                <p class="text-3xl font-bold text-blue-600">R$ <span id="total-price">0,00</span></p>
+                <p class="text-3xl font-bold text-blue-600"> <span id="total-price">0,00</span></p>
             </div>
 
             <button id="add-to-cart"
@@ -272,15 +272,14 @@
                     </div>
                 </div>
                 <div class="text-sm text-center md:text-right">
-                    <p>Telefone: (19) 3571-4898</p>
-                    <p>© 2025 - Todos os direitos reservados</p>
+                    <p>Telefone: (19) 3571-4898
+</p>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Script principal -->
     <script src="./script.js"></script>
 </body>
 
 </html>
+
