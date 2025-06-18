@@ -1,0 +1,153 @@
+/* Estilo para números da rifa */
+.number-item {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.number-item.selected {
+    background-color: #003e7e !important;
+    color: white;
+    font-weight: bold;
+}
+
+.number-item.sold {
+    background-color: #9e1b32 !important;
+    color: white;
+    cursor: not-allowed;
+}
+
+.number-item:hover:not(.sold):not(.selected) {
+    background-color: #0056b3 !important;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Grade dos números */
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 3.5rem);
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* Botões de seta de navegação entre páginas de números */
+.arrow-button {
+    background-color: #003e7e;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+    font-size: 1.5rem;
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-button:hover {
+    background-color: #0056b3;
+}
+
+.arrow-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Menu de bolinhas para páginas de números */
+.menu {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dot.active {
+    background-color: blue;
+}
+
+/* CSS compartilhado entre as duas telas */
+/* Animações gerais */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Modal reutilizada */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: #003e7e;
+    border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+/* Fonte geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Gradiente institucional */
+.etec-gradient {
+    background: linear-gradient(135deg, #003e7e 0%, #0056b3 100%);
+}
+
+/* cor da lixeira js */
+.red-trash-icon {
+    color: red;
+}
